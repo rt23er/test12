@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print PDF Example</title>
+    <script type="text/javascript" src="../static/js/print.js"></script>
+</head>
+<body>
+
+<button onclick="printPDF()">Print PDF</button>
+
+<script>
+    function printPDF() {
+        printJS({
+            printable: '../static/pdf/001.pdf', // PDF文件的路径
+            type: 'pdf', // 打印类型为PDF
+            showModal: true, // 是否显示打印前的预览框
+            zoom: 'auto', // 自动适配可打印区域
+        });
+    }
+</script>
+
+</body>
+</html>
